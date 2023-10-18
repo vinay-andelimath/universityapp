@@ -1,0 +1,3 @@
+Step 1:npm install express mongoose uuid bcrypt
+Step 2:.env package (to secure the key and other db information).
+Step 3:npm install nodemon 

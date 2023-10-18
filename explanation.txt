@@ -1,0 +1,12 @@
+Step 1:Initialize the app and check wheather the app is running or not.
+Step 2:Set-up the project structure in MVC model.
+Step 3:install the nodemon to start the server 
+Step 4:Define the Student model in models/student using the universityId and password
+Step 5:setup the student registration by setting up the routes path and calling the register module.
+Step 6:Check the api end points such as http://localhost:3000/student/register in postman and also for login
+Step 7:Check the token generted by each route must be a different.
+Step 8:Check for the wrong password.
+Step 9:Check for the route login B for student B.
+Step 10:Check for the route login B for wrong password.
+Step 11:now add the dean model,controller and routes.
+Step 12:now add the session model under ./models/session.

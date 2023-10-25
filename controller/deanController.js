@@ -71,32 +71,32 @@ module.exports = {
             res.status(500).json({ message: 'Internal server error' });
         }
     },
-    getFreeSessions: async (req, res) => {
-        // Get free sessions logic
-        // Query the database for available sessions
-        const sessions = await Session.find({ available: true });
+    // getFreeSessions: async (req, res) => {
+    //     // Get free sessions logic
+    //     // Query the database for available sessions
+    //     const sessions = await Session.find({ available: true });
 
-        res.json(sessions);
-    },
+    //     res.json(sessions);
+    // },
 
-    bookSession: async (req, res) => {
-        // Booking a session logic
-        // Update the session in the database to mark it as booked by the student
-        const session = await Session.findById(req.params.sessionId);
+    // bookSession: async (req, res) => {
+    //     // Booking a session logic
+    //     // Update the session in the database to mark it as booked by the student
+    //     const session = await Session.findById(req.params.sessionId);
 
-        if (!session) {
-            return res.status(404).json({ message: 'Session not found' });
-        }
+    //     if (!session) {
+    //         return res.status(404).json({ message: 'Session not found' });
+    //     }
 
-        if (session.available) {
-            // Book the session
-            session.bookedBy = req.user._id;
-            session.available = false;
-            await session.save();
+    //     if (session.available) {
+    //         // Book the session
+    //         session.bookedBy = req.user._id;
+    //         session.available = false;
+    //         await session.save();
 
-            res.json({ message: 'Session booked successfully' });
-        } else {
-            res.status(400).json({ message: 'Session is already booked' });
-        }
-    },
+    //         res.json({ message: 'Session booked successfully' });
+    //     } else {
+    //         res.status(400).json({ message: 'Session is already booked' });
+    //     }
+    // },
 }
